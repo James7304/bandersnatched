@@ -36,11 +36,6 @@ function generate(accept, recalc=true){
         return;
     }
 
-    for(p in data){
-        console.log(data[p]);
-    }
-    console.log("--------------------");
-
     get = false;
     document.getElementById('spinner').classList.remove('hide');
 
@@ -48,20 +43,20 @@ function generate(accept, recalc=true){
 
         if(accept){
             for(let p in data){
-                if(data[p] == 5){
+                if(data[p] == 10){
                     data[p]--;
                 }
                 else if(data[p] == 1){
                     data[p]++;
                 }
-                else if(data[p] < currentProfile[p] && data[p] < 5){
+                else if(data[p] < currentProfile[p] && data[p] < 10){
                     data[p]++;
                 }
                 else if(data[p] > currentProfile[p] && data[p] > 1){
                     data[p]--;
                 }
-                else if(data[p] != 1 && data[p] != 5){
-                    data[p] += (Math.random() < 0.5 || data[p] == 1) && data[p] != 5 ? 1 : -1;
+                else if(data[p] != 1 && data[p] != 10){
+                    data[p] += (Math.random() < 0.5 || data[p] == 1) && data[p] != 10 ? 1 : -1;
                 }
             }
         }
@@ -70,17 +65,17 @@ function generate(accept, recalc=true){
                 if(data[p] == 1){
                     data[p]++;
                 }
-                else if(data[p] == 5){
+                else if(data[p] == 10){
                     data[p]--;
                 }
-                else if(data[p] > currentProfile[p] && data[p] < 5){
+                else if(data[p] > currentProfile[p] && data[p] < 10){
                     data[p]++;
                 }
                 else if(data[p] < currentProfile[p] && data[p] > 1){
                     data[p]--;
                 }
-                else if(data[p] != 1 && data[p] != 5){
-                    data[p] += (Math.random() < 0.5 || data[p] == 1) && data[p] != 5 ? 1 : -1;
+                else if(data[p] != 1 && data[p] != 10){
+                    data[p] += (Math.random() < 0.5 || data[p] == 1) && data[p] != 10 ? 1 : -1;
                 }
             }
         }
