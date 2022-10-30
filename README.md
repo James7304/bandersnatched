@@ -1,7 +1,7 @@
 # bandersnatched
 
 ## Tasks
-setup database
-create form on index.php
-create algorithm.php
-create generator.php
+setup database\n
+create form on index.php\n
+create algorithm.php\n
+create generator.php\n
