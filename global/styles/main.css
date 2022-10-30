@@ -18,6 +18,9 @@
     color:var(--primary-text);
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
+.header h1{
+    font-size:2.5rem;    
+}
 
 .container{
     text-align: center;
@@ -25,13 +28,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding:25vh;
-    height:calc(50vh - 64px);
-}
-.container .col{
-    display:flex;
-    flex-direction: column;
-    position:relative;
+    height:calc(100vh - 76px);
 }
 .container .buttons{
     padding-bottom:0.5rem;
@@ -40,7 +37,7 @@
     justify-content: right;
 }
 .container video{
-    width:100%;
+    width:50rem;
 }
 .container button{
     height:3rem;
@@ -60,17 +57,16 @@
     background-color:var(--secondary-background);
     margin:0.4rem;
     margin-left:1rem;
-    border-radius:12px;
-    padding:0.5rem;
-
+    border-radius:1.5rem;
+    padding:1rem;
 }
 .container .bubble p{
     word-wrap: break-word;
     text-align: left;
+    font-size:1rem;
 }
 .container .bubble h2{
     text-align: left;
-    padding-left:0.5rem;
     color:white;
     font-size:1.25rem;
 }
@@ -87,9 +83,123 @@
     z-index:1;
 }
 .overlay p{
-    font-size:3rem;
+    font-size:2rem;
     color:white;
 }
 .overlay p span#name{
     font-weight:bold;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container video{
+        width:40rem;
+    }
+    .overlay p{
+        font-size:1.5rem;
+    }
+    .container .bubble{
+        width:18rem;
+        padding:0.7rem;
+    }
+    .container .bubble p{
+        font-size:.8rem;
+    }
+    .container .bubble h2{
+        font-size:1.1rem;
+    }
+
+    .container button{
+        height:2.5rem;
+        width:2.5rem;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .container video{
+        width:30rem;
+    }
+    .overlay p{
+        font-size:1.2rem;
+    }
+    .container .bubble{
+        width:16rem;
+        padding:0.7rem;
+    }
+    .container .bubble p{
+        font-size:.75rem;
+    }
+    .container .bubble h2{
+        font-size:1rem;
+    }
+}
+@media only screen and (max-width: 850px) {
+
+    .container{
+        flex-direction: column;
+    }
+
+    .container video{
+        width:35rem;
+    }
+    .overlay p{
+        font-size:1.5rem;
+    }
+    .container .bubble{
+        width:16rem;
+        padding:0.7rem;
+    }
+    .container .bubble p{
+        font-size:.75rem;
+    }
+    .container .bubble h2{
+        font-size:1rem;
+    }
+
+    .container .bubble{
+        display:inline-block;
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    .container video{
+        width:30rem;
+    }
+    .overlay p{
+        font-size:1.2rem;
+    }
+    .container .bubble{
+        width:14rem;
+        padding:0.7rem;
+    }
+    .container .bubble p{
+        font-size:.75rem;
+    }
+    .container .bubble h2{
+        font-size:1rem;
+    }
+    .header h1{
+        font-size:1.5rem;    
+    }
+}
+@media only screen and (max-width: 550px) {
+    .container video{
+        width:28rem;
+    }
+    .overlay p{
+        font-size:1.2rem;
+    }
+    .container .bubble{
+        width:28rem;
+    }
+}
+@media only screen and (max-width: 510px) {
+    .container video{
+        width:22rem;
+    }
+    .container .bubble{
+        width:22rem;
+    }
+    .header h1{
+        font-size:1.2rem;
+        text-align: center;  
+    }
 }

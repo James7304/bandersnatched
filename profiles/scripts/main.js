@@ -12,7 +12,7 @@ var currentProfile = data;
 
 function populate(response){
     const info = response.split("*");
-    document.getElementById("vid-src").src = info[1];
+    //document.getElementById("vid-src").src = info[1];
     document.getElementById("name").textContent = info[2];
     document.getElementById("age").textContent = info[3];
     document.getElementById("bio-p").textContent = info[4];
