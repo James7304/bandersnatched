@@ -25,10 +25,15 @@
 
         <div class="col">
 
-            <video autoplay muted>
-                <source src="../global/videos/testvid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="vid-container">
+                <video id="vid-src" autoplay muted onclick="play()">
+                    <source src="../global/videos/testvid.mp4" type="video/mp4" />
+                </video>
+                <div class="overlay">
+                    <p><span id="name"></span>, <span id="age"></span></p>
+                </div>
+            </div>
+            
 
             <div class="buttons">
                 <button onclick="generate(true)">Yes</button>
