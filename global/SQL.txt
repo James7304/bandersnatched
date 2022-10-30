@@ -1,0 +1,9 @@
+Create shows table -----------------------
+CREATE TABLE `shows`
+(`ID` INT AUTO_INCREMENT, `name` VARCHAR(32) NOT NULL, `age` INT, `bio` VARCHAR(140), `idealDate` VARCHAR(140), `quirks` VARCHAR(64), `kinks` VARCHAR(64),
+ `horror` INT, `fantasy` INT, `time` INT, `family` INT, `topia` INT,
+ PRIMARY KEY(`ID`))
+
+Standard insert query -----------------------------
+INSERT INTO shows (`name`,`location`,`age`,`bio`,`idealDate`,`quirks`,`horror`,`fantasy`,`time`,`family`,`topia`)
+VALUES()
