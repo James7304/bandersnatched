@@ -42,7 +42,7 @@
     }
 
     // Get all data for show ID
-    $sql = "SELECT * FROM shows WHERE ID =".$best_show_ID;
+    $sql = "SELECT * FROM shows WHERE ID=".$best_show_ID;
     $result = mysqli_query($conn, $sql);
     $info = mysqli_fetch_array($result,MYSQLI_ASSOC);
 

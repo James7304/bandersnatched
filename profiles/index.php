@@ -26,7 +26,7 @@
 
             <div class="vid-container">
                 <video id="vid-src" autoplay muted onclick="play()">
-                    <source src="../global/videos/testvid.mp4" type="video/mp4" />
+                    <source src="" type="video/mp4" />
                 </video>
                 <div class="overlay">
                     <p><span id="name"></span>, <span id="age"></span></p>

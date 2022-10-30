@@ -1,11 +1,11 @@
 
 var data = {
 
-    "horror":Math.floor(Math.random()*5 + 1),
-    "fantasy":Math.floor(Math.random()*5 + 1),
-    "time":Math.floor(Math.random()*5 + 1),
-    "family":Math.floor(Math.random()*5 + 1),
-    "topia":Math.floor(Math.random()*5 + 1),
+    "horror":Math.floor(Math.random()*10 + 1),
+    "fantasy":Math.floor(Math.random()*10 + 1),
+    "time":Math.floor(Math.random()*10 + 1),
+    "family":Math.floor(Math.random()*10 + 1),
+    "topia":Math.floor(Math.random()*10 + 1),
 
 }
 var currentProfile = data;
@@ -13,7 +13,7 @@ var get = true;
 
 function populate(response){
     const info = response.split("*");
-    //document.getElementById("vid-src").src = info[1];
+    document.getElementById("vid-src").src = info[1];
     document.getElementById("name").textContent = info[2];
     document.getElementById("age").textContent = info[3];
     document.getElementById("bio-p").textContent = info[4];
@@ -35,6 +35,11 @@ function generate(accept, recalc=true){
     if(!get){
         return;
     }
+
+    /* for(d in data){
+        console.log(data[d]);
+    }
+    console.log("------------"); */
 
     get = false;
     document.getElementById('spinner').classList.remove('hide');
