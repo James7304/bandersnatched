@@ -1,5 +1,1 @@
-<?php 
-
-    include "./global/scripts/connection.php"
-
-?>
+<?php header("Location: ./profiles"); ?>
