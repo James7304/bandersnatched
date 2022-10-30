@@ -30,11 +30,16 @@ function populate(response){
     }
 }
 
-function generate(accept, recalc=true){
+function generate(accept, recalc=true){  
 
     if(!get){
         return;
     }
+
+    for(p in data){
+        console.log(data[p]);
+    }
+    console.log("--------------------");
 
     get = false;
     document.getElementById('spinner').classList.remove('hide');
@@ -43,7 +48,13 @@ function generate(accept, recalc=true){
 
         if(accept){
             for(let p in data){
-                if(data[p] < currentProfile[p] && data[p] < 5){
+                if(data[p] == 5){
+                    data[p]--;
+                }
+                else if(data[p] == 1){
+                    data[p]++;
+                }
+                else if(data[p] < currentProfile[p] && data[p] < 5){
                     data[p]++;
                 }
                 else if(data[p] > currentProfile[p] && data[p] > 1){
@@ -56,7 +67,13 @@ function generate(accept, recalc=true){
         }
         else{
             for(let p in data){
-                if(data[p] > currentProfile[p] && data[p] < 5){
+                if(data[p] == 1){
+                    data[p]++;
+                }
+                else if(data[p] == 5){
+                    data[p]--;
+                }
+                else if(data[p] > currentProfile[p] && data[p] < 5){
                     data[p]++;
                 }
                 else if(data[p] < currentProfile[p] && data[p] > 1){
