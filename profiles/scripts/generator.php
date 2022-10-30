@@ -45,5 +45,5 @@
     $info = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
     // send all data back
-    echo implode(",",$info);
+    echo implode("*",$info);
 ?>

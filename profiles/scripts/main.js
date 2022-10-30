@@ -10,8 +10,25 @@ var data = {
 }
 var currentProfile = data;
 
-function populate(info){
-    alert(info)
+function populate(response){
+    const info = response.split("*");
+    document.getElementById("vid-src").src = info[1];
+    document.getElementById("name").textContent = info[2];
+    document.getElementById("age").textContent = info[3];
+    document.getElementById("bio-p").textContent = info[4];
+    document.getElementById("date-p").textContent = info[5];
+    document.getElementById("quirks-p").textContent = info[6];
+    document.getElementById("kinks-p").textContent = info[7];
+
+    currentProfile = {
+        "horror": info[8],
+        "fantasy": info[9],
+        "time": info[10],
+        "family": info[11],
+        "topia": info[12],
+    }
+
+    alert(data["horror"] + " " + data["fantasy"] + " " + data["time"] + " " + data["family"] + " " + data["topia"]);
 }
 
 function generate(accept, recalc=true){
@@ -20,10 +37,10 @@ function generate(accept, recalc=true){
 
         if(accept){
             for(let p in data){
-                if(data[p] > currentProfile[p]){
+                if(data[p] < currentProfile[p]){
                     data[p]++;
                 }
-                else if(data[p] < currentProfile[p]){
+                else if(data[p] > currentProfile[p]){
                     data[p]--;
                 }
                 else if(data[p] != 1 && data[p] != 5){
@@ -33,10 +50,10 @@ function generate(accept, recalc=true){
         }
         else{
             for(let p in data){
-                if(data[p] < currentProfile[p]){
+                if(data[p] > currentProfile[p]){
                     data[p]++;
                 }
-                else if(data[p] > currentProfile[p]){
+                else if(data[p] < currentProfile[p]){
                     data[p]--;
                 }
                 else if(data[p] != 1 && data[p] != 5){
