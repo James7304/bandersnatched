@@ -8,6 +8,7 @@
     --secondary-text:white;
     --primary-background:#f4acb7;
     --secondary-background:#ffcad4;
+    --tertiary-background:#696d7d;
 }
 
 .header{
@@ -204,4 +205,22 @@
         font-size:1.2rem;
         text-align: center;  
     }
+}
+
+.spin {
+    margin: 0.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    animation: spin 1.5s linear infinite;
+    border-bottom-color: var(--tertiary-background);
+    border-top-color:  var(--tertiary-background);
+}
+.hide{
+    display:none;
+}
+@keyframes spin {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
 }

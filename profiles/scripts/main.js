@@ -35,8 +35,9 @@ function generate(accept, recalc=true){
     if(!get){
         return;
     }
-    
+
     get = false;
+    document.getElementById('spinner').classList.remove('hide');
 
     if(recalc){
 
@@ -49,7 +50,7 @@ function generate(accept, recalc=true){
                     data[p]--;
                 }
                 else if(data[p] != 1 && data[p] != 5){
-                    data[p] += Math.random() < 0.5 ? 1 : -1
+                    data[p] += (Math.random() < 0.5 || data[p] == 1) && data[p] != 5 ? 1 : -1;
                 }
             }
         }
@@ -62,7 +63,7 @@ function generate(accept, recalc=true){
                     data[p]--;
                 }
                 else if(data[p] != 1 && data[p] != 5){
-                    data[p] += Math.random() < 0.5 ? 1 : -1
+                    data[p] += (Math.random() < 0.5 || data[p] == 1) && data[p] != 5 ? 1 : -1;
                 }
             }
         }
@@ -79,6 +80,7 @@ function generate(accept, recalc=true){
         if(http.readyState == 4 && http.status == 200) {
             populate(http.responseText);
             get = true;
+            document.getElementById('spinner').classList.add('hide');
         }
     }
     http.send('data=' + JSON.stringify(data));
