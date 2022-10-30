@@ -1,5 +1,17 @@
 <?php 
-    //echo json_decode($_POST['data'], true)["horror"];
+
+    $servername = "sql750.main-hosting.eu";
+    $username = "u202629177_admin";
+    $password = "Bandersnatched123";
+    $dbname = "u202629177_bandersnatched";
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
     // find a match
     $findHorror = json_decode($_POST['data'], true)["horror"];
@@ -15,12 +27,12 @@
     }
 
     $sql_num_of_shows = "SELECT * FROM shows";
-    $total_shows = mysqli_num_rows(mysqli_query($conn, $sql_num_of_shows));
-    
-
+    $result = mysqli_query($conn, $sql_num_of_shows);
+    $total_shows = mysqli_num_rows($result);
+     
     // Find best show ID
     $best_show_ID = 0;
-    $lowest_cost = 0;
+    $lowest_cost = 126;
     for ($index=1; $index<=$total_shows; $index++){
         $sql = "SELECT `ID`, `horror`, `fantasy`, `time`, `family`, `topia` FROM shows WHERE `ID` = ".$index;
         $result = mysqli_query($conn, $sql);
@@ -38,9 +50,8 @@
         }
     }
 
-
     // Get all data for show ID
-    $sql = "SELECT * FROM show WHERE `ID` =". $best_show_ID;
+    $sql = "SELECT * FROM shows WHERE ID =".$best_show_ID;
     $result = mysqli_query($conn, $sql);
     $info = mysqli_fetch_array($result,MYSQLI_ASSOC);
 

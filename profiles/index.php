@@ -23,13 +23,32 @@
 
     <div class="container">
 
-    <!-- <video id="vid" width="320" height="240" autoplay muted>
-  <source src="../global/videos/testvid.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video> -->
+        <div class="col">
 
-        <button onclick="generate(true)">Yes</button>
-        <button onclick="generate(false)">No</button>
+            <video autoplay muted>
+                <source src="../global/videos/testvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="buttons">
+                <button onclick="generate(true)">Yes</button>
+                <button onclick="generate(false)">No</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="bubble">
+                
+            </div>
+            <div class="bubble">
+
+            </div>
+            <div class="bubble">
+
+            </div>
+            <div class="bubble">
+
+            </div>
+        </div>
 
     </div>
 

@@ -6,6 +6,7 @@
 :root{
     --primary-text:#ffe5d9;
     --primary-background:#f4acb7;
+    --secondary-background:#ffcad4;
 }
 
 .header{
@@ -19,5 +20,44 @@
 }
 
 .container{
-    
+    background-color: red;
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container .col{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+}
+.container .buttons{
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    display:flex;
+    flex-direction: row;
+}
+.container video{
+    width:100%;
+}
+.container button{
+    width:40%;
+    height:2rem;
+    border-radius: 1rem;
+    margin-left:1rem;
+    margin-right:1rem;
+    border:0;
+    background-color: var(--primary-background);
+    cursor:pointer;
+}
+.container button:hover{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.container .bubble{
+    width:18rem;
+    background-color:var(--secondary-background);
+    height:8rem;
+    margin:0.4rem;
+    margin-left:1rem;
 }

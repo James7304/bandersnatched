@@ -8,8 +8,47 @@ var data = {
     "topia":Math.floor(Math.random()*5 + 1),
 
 }
+var currentProfile = {
 
-function generate(accept){
+    "horror":0,
+    "fantasy":0,
+    "time":0,
+    "family":0,
+    "topia":0,
+
+}
+
+function generate(accept, recalc=true){
+
+    if(recalc){
+
+        if(accept){
+            for(let p in data){
+                if(data[p] > currentProfile[p]){
+                    data[p]++;
+                }
+                else if(data[p] < currentProfile[p]){
+                    data[p]--;
+                }
+                else{
+                    data[p] += Math.random() < 0.5 ? 1 : -1
+                }
+            }
+        }
+        else{
+            for(let p in data){
+                if(data[p] < currentProfile[p]){
+                    data[p]++;
+                }
+                else if(data[p] > currentProfile[p]){
+                    data[p]--;
+                }
+                else{
+                    data[p] += Math.random() < 0.5 ? 1 : -1
+                }
+            }
+        }
+    }
 
     var http = new XMLHttpRequest();
     var url = './profiles/scripts/generator.php';
@@ -26,4 +65,4 @@ function generate(accept){
     http.send('data=' + JSON.stringify(data));
 }
 
-console.log(data);
+generate(true, false);
