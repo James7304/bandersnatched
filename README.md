@@ -1,1 +1,5 @@
 # bandersnatched
+
+## Tasks
+setup database
+
