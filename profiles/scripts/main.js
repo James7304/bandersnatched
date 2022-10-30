@@ -87,7 +87,7 @@ function generate(accept, recalc=true){
     }
 
     var http = new XMLHttpRequest();
-    var url = './profiles/scripts/generator.php';
+    var url = './scripts/generator.php';
     http.open('POST', url, true);
 
     //Send the proper header information along with the request
