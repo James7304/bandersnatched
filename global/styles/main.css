@@ -4,7 +4,8 @@
 }
 
 :root{
-    --primary-text:#ffe5d9;
+    --primary-text:#f4f8ff;
+    --secondary-text:white;
     --primary-background:#f4acb7;
     --secondary-background:#ffcad4;
 }
@@ -54,7 +55,7 @@
 
 .container .bubble{
     width:18rem;
-    background-color:var(--secondary-background);
+    background-color:var(--primary-background);
     margin:0.4rem;
     margin-left:1rem;
     border-radius:1.5rem;
@@ -64,10 +65,11 @@
     word-wrap: break-word;
     text-align: left;
     font-size:1rem;
+    color:var(--secondary-text);
 }
 .container .bubble h2{
     text-align: left;
-    color:white;
+    color:var(--primary-text);
     font-size:1.25rem;
 }
 

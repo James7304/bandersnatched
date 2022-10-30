@@ -9,6 +9,7 @@ var data = {
 
 }
 var currentProfile = data;
+var get = true;
 
 function populate(response){
     const info = response.split("*");
@@ -31,14 +32,20 @@ function populate(response){
 
 function generate(accept, recalc=true){
 
+    if(!get){
+        return;
+    }
+    
+    get = false;
+
     if(recalc){
 
         if(accept){
             for(let p in data){
-                if(data[p] < currentProfile[p]){
+                if(data[p] < currentProfile[p] && data[p] < 5){
                     data[p]++;
                 }
-                else if(data[p] > currentProfile[p]){
+                else if(data[p] > currentProfile[p] && data[p] > 1){
                     data[p]--;
                 }
                 else if(data[p] != 1 && data[p] != 5){
@@ -48,10 +55,10 @@ function generate(accept, recalc=true){
         }
         else{
             for(let p in data){
-                if(data[p] > currentProfile[p]){
+                if(data[p] > currentProfile[p] && data[p] < 5){
                     data[p]++;
                 }
-                else if(data[p] < currentProfile[p]){
+                else if(data[p] < currentProfile[p] && data[p] > 1){
                     data[p]--;
                 }
                 else if(data[p] != 1 && data[p] != 5){
@@ -71,6 +78,7 @@ function generate(accept, recalc=true){
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
             populate(http.responseText);
+            get = true;
         }
     }
     http.send('data=' + JSON.stringify(data));
