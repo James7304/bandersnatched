@@ -1,13 +1,14 @@
 <?php
 $servername = "sql750.main-hosting.eu";
-$username = "admin";
+$username = "u202629177_admin";
 $password = "Bandersnatched123";
+$dbname = "u202629177_bandersnatched";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>

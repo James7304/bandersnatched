@@ -8,13 +8,9 @@ var data = {
     "topia":Math.floor(Math.random()*5 + 1),
 
 }
-var currentProfile = {
+var currentProfile = data;
 
-    "horror":0,
-    "fantasy":0,
-    "time":0,
-    "family":0,
-    "topia":0,
+function populate(info){
 
 }
 
@@ -30,7 +26,7 @@ function generate(accept, recalc=true){
                 else if(data[p] < currentProfile[p]){
                     data[p]--;
                 }
-                else{
+                else if(data[p] != 1 && data[p] != 5){
                     data[p] += Math.random() < 0.5 ? 1 : -1
                 }
             }
@@ -43,7 +39,7 @@ function generate(accept, recalc=true){
                 else if(data[p] > currentProfile[p]){
                     data[p]--;
                 }
-                else{
+                else if(data[p] != 1 && data[p] != 5){
                     data[p] += Math.random() < 0.5 ? 1 : -1
                 }
             }
@@ -59,7 +55,7 @@ function generate(accept, recalc=true){
 
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
-            alert(http.responseText);
+            populate(http.responseText);
         }
     }
     http.send('data=' + JSON.stringify(data));

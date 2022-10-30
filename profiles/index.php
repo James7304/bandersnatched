@@ -36,16 +36,28 @@
             </div>
         </div>
         <div class="col">
-            <div class="bubble">
+            <div class="bubble" id="bio">
+
+                <h2>Bio</h2>
+                <p id="bio-p"></p>
+
+            </div>
+            <div class="bubble" id="date">
+
+                <h2>Ideal Date</h2>
+                <p id="date-p"></p>
+
+            </div>
+            <div class="bubble" id="quirks">
+
+                <h2>Quirks</h2>
+                <p id="quirks-p"></p>
                 
             </div>
-            <div class="bubble">
+            <div class="bubble" id="kinks">
 
-            </div>
-            <div class="bubble">
-
-            </div>
-            <div class="bubble">
+                <h2>Kinks</h2>
+                <p id="kinks-p"></p>
 
             </div>
         </div>
