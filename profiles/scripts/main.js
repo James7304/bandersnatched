@@ -27,8 +27,6 @@ function populate(response){
         "family": info[11],
         "topia": info[12],
     }
-
-    alert(data["horror"] + " " + data["fantasy"] + " " + data["time"] + " " + data["family"] + " " + data["topia"]);
 }
 
 function generate(accept, recalc=true){

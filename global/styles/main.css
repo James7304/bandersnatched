@@ -25,8 +25,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding:5rem;
-    height:calc(100vh - 15rem - 64px);
+    padding:25vh;
+    height:calc(50vh - 64px);
 }
 .container .col{
     display:flex;
@@ -34,20 +34,19 @@
     position:relative;
 }
 .container .buttons{
-    padding-top:0.5rem;
     padding-bottom:0.5rem;
     display:flex;
     flex-direction: row;
+    justify-content: right;
 }
 .container video{
     width:100%;
 }
 .container button{
-    width:40%;
-    height:2rem;
-    border-radius: 1rem;
-    margin-left:1rem;
-    margin-right:1rem;
+    height:3rem;
+    width:3rem;
+    border-radius:3rem;
+    margin:0.2rem;
     border:0;
     background-color: var(--primary-background);
     cursor:pointer;
@@ -59,15 +58,15 @@
 .container .bubble{
     width:18rem;
     background-color:var(--secondary-background);
-    height:8rem;
-    max-height:10rem;
     margin:0.4rem;
     margin-left:1rem;
     border-radius:12px;
-    position:relative;
+    padding:0.5rem;
+
 }
 .container .bubble p{
-    display:inline;
+    word-wrap: break-word;
+    text-align: left;
 }
 .container .bubble h2{
     text-align: left;
