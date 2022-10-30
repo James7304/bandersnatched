@@ -11,7 +11,7 @@ var data = {
 var currentProfile = data;
 
 function populate(info){
-
+    alert(info)
 }
 
 function generate(accept, recalc=true){
