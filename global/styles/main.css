@@ -158,3 +158,48 @@
         display:inline-block;
     }
 }
+
+@media only screen and (max-width: 615px) {
+    .container video{
+        width:30rem;
+    }
+    .overlay p{
+        font-size:1.2rem;
+    }
+    .container .bubble{
+        width:14rem;
+        padding:0.7rem;
+    }
+    .container .bubble p{
+        font-size:.75rem;
+    }
+    .container .bubble h2{
+        font-size:1rem;
+    }
+    .header h1{
+        font-size:1.5rem;    
+    }
+}
+@media only screen and (max-width: 550px) {
+    .container video{
+        width:28rem;
+    }
+    .overlay p{
+        font-size:1.2rem;
+    }
+    .container .bubble{
+        width:28rem;
+    }
+}
+@media only screen and (max-width: 510px) {
+    .container video{
+        width:22rem;
+    }
+    .container .bubble{
+        width:22rem;
+    }
+    .header h1{
+        font-size:1.2rem;
+        text-align: center;  
+    }
+}
